@@ -3,8 +3,7 @@
   "isLogicalNode": false,
   "canCreateInstance": true,
   "topology": {
-    "type": "top-level",
-    "image": "station.svg"
+    "type": "top-level"
   },
   "P": [
     {"id":1,"name":"Rated Capacity","unit":"","type":"string"},

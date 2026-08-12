@@ -9,7 +9,7 @@
     "components": [
       {
         "name": "Meter",
-        "image": "meter.svg",
+        "image": "device-Meter.png",
         "selectableProductTypes": [
           "Single Phase Load",
           "Three Phase Load"
