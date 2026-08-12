@@ -1,0 +1,17 @@
+{
+  "name": "Hybrid Inverter",
+  "pName": "ESS",
+  "isLogicalNode": false,
+  "canCreateInstance": true,
+  "topology": {
+    "type": "composite",
+    "image": "device-HybridInverter.png",
+    "components": [
+      {"productName": "Battery"},
+      {"productName": "PCS"}
+    ]
+  },
+  "P": [],
+  "M": [],
+  "A": []
+}

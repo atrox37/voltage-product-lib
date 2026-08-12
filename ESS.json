@@ -1,6 +1,8 @@
 {
   "name": "ESS",
   "pName": "Station",
+  "isLogicalNode": true,
+  "canCreateInstance": false,
   "P": [],
   "M": [],
   "A": []
