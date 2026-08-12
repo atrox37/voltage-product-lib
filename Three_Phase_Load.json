@@ -1,9 +1,9 @@
 {
-  "name": "Three Phase Load",
+  "name": "Three_Phase_Load",
   "pName": "Load",
-  "isLogicalNode": false,
   "canCreateInstance": true,
   "topology": {
+    "enabled": true,
     "type": "standalone",
     "image": "device-ThreePhaseLoad.png"
   },

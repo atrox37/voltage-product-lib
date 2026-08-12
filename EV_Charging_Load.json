@@ -1,9 +1,9 @@
 {
-  "name": "EV Charging Load",
+  "name": "EV_Charging_Load",
   "pName": "Station",
-  "isLogicalNode": false,
   "canCreateInstance": true,
   "topology": {
+    "enabled": true,
     "type": "standalone",
     "image": "device-EVChargingLoad.png"
   },

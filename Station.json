@@ -1,8 +1,8 @@
 {
   "name": "Station",
-  "isLogicalNode": false,
   "canCreateInstance": true,
   "topology": {
+    "enabled": true,
     "type": "top-level"
   },
   "P": [
