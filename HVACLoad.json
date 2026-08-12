@@ -1,6 +1,12 @@
 {
   "name": "HVACLoad",
   "pName": "Station",
+  "isLogicalNode": false,
+  "canCreateInstance": true,
+  "topology": {
+    "type": "standalone",
+    "image": "device-HVACLoad.png"
+  },
   "P": [
     {"id":1,"name":"Max Voltage","unit":"V","type":"number"},
     {"id":2,"name":"Max Current","unit":"A","type":"number"},

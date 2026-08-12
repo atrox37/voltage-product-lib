@@ -1,5 +1,11 @@
 {
   "name": "Station",
+  "isLogicalNode": false,
+  "canCreateInstance": true,
+  "topology": {
+    "type": "top-level",
+    "image": "station.svg"
+  },
   "P": [
     {"id":1,"name":"Rated Capacity","unit":"","type":"string"},
     {"id":2,"name":"Longitude","unit":"","type":"string"},

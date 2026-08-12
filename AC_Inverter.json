@@ -1,6 +1,12 @@
 {
-  "name": "PVInverter",
+  "name": "AC_Inverter",
   "pName": "Generator",
+  "isLogicalNode": false,
+  "canCreateInstance": true,
+  "topology": {
+    "type": "standalone",
+    "image": "device-ACInverter.png"
+  },
   "P": [
     {"id":1,"name":"Max Power","unit":"kw","type":"number"},
     {"id":2,"name":"Max DC Voltage","unit":"V","type":"number"},
