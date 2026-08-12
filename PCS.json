@@ -1,9 +1,9 @@
 {
   "name": "PCS",
   "pName": "ESS",
-  "isLogicalNode": false,
   "canCreateInstance": true,
   "topology": {
+    "enabled": true,
     "type": "standalone",
     "image": "device-PCS.png"
   },

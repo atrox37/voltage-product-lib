@@ -1,9 +1,9 @@
 {
-  "name": "Distribution Board",
+  "name": "Distribution_Board",
   "pName": "Load",
-  "isLogicalNode": false,
   "canCreateInstance": false,
   "topology": {
+    "enabled": true,
     "type": "container",
     "image": "device-DistributionBoard.png",
     "components": [

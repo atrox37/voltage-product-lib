@@ -1,9 +1,9 @@
 {
   "name": "Diesel",
   "pName": "Generator",
-  "isLogicalNode": false,
   "canCreateInstance": true,
   "topology": {
+    "enabled": true,
     "type": "standalone",
     "image": "device-Diesel.png"
   },

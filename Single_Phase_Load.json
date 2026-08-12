@@ -1,11 +1,11 @@
 {
-  "name": "Single Phase Load",
+  "name": "Single_Phase_Load",
   "pName": "Load",
-  "isLogicalNode": false,
   "canCreateInstance": true,
   "topology": {
+    "enabled": true,
     "type": "standalone",
-    "image": "device-SinglePhaseLoad.svg"
+    "image": "device-SinglePhaseLoad.png"
   },
   "P": [
     {"id":1,"name":"Max Voltage","unit":"V","type":"number"},

@@ -1,8 +1,10 @@
 {
   "name": "Generator",
   "pName": "Station",
-  "isLogicalNode": true,
   "canCreateInstance": false,
+  "topology": {
+    "enabled": false
+  },
   "P": [],
   "M": [],
   "A": []

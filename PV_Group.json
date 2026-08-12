@@ -1,9 +1,9 @@
 {
-  "name": "PV Group",
+  "name": "PV_Group",
   "pName": "Generator",
-  "isLogicalNode": false,
   "canCreateInstance": true,
   "topology": {
+    "enabled": true,
     "type": "standalone",
     "image": "device-PVGroup.png"
   },
