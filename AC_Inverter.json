@@ -1,5 +1,5 @@
 {
-  "name": "AC_Inverter",
+  "name": "AC Inverter",
   "pName": "Generator",
   "isLogicalNode": false,
   "canCreateInstance": true,

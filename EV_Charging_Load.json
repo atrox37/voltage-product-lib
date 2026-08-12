@@ -1,5 +1,5 @@
 {
-  "name": "EVChargingLoad",
+  "name": "EV Charging Load",
   "pName": "Station",
   "isLogicalNode": false,
   "canCreateInstance": true,
