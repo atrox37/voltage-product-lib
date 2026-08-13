@@ -6,6 +6,7 @@
     "enabled": true,
     "type": "container",
     "image": "device-DistributionBoard.png",
+    "connectableProducts": ["Single_Phase_Load", "Three_Phase_Load", "EV_Charging_Load", "HVAC_Load"],
     "components": [
       {
         "name": "Meter",

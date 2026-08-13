@@ -1,6 +1,6 @@
 {
   "name": "EV_Charging_Load",
-  "pName": "Station",
+  "pName": "Load",
   "canCreateInstance": true,
   "topology": {
     "enabled": true,

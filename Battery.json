@@ -5,7 +5,8 @@
   "topology": {
     "enabled": true,
     "type": "standalone",
-    "image": "device-Battery.png"
+    "image": "device-Battery.png",
+    "connectableProducts": ["Hybrid_Inverter", "PCS"]
   },
   "P": [
     {"id":1,"name":"Max Power","unit":"kw","type":"number"},

@@ -5,7 +5,8 @@
   "topology": {
     "enabled": true,
     "type": "standalone",
-    "image": "device-ACInverter.png"
+    "image": "device-ACInverter.png",
+    "connectableProducts": ["Distribution_Board"]
   },
   "P": [
     {"id":1,"name":"Max Power","unit":"kw","type":"number"},
