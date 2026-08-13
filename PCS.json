@@ -9,7 +9,7 @@
     "connectableProducts": ["Distribution_Board"]
   },
   "P": [
-    {"id":1,"name":"Max Power","unit":"kw","type":"number"},
+    {"id":1,"name":"Max Power","unit":"kW","type":"number"},
     {"id":2,"name":"Max Voltage","unit":"V","type":"number"},
     {"id":3,"name":"Max Current AC","unit":"A","type":"number"},
     {"id":4,"name":"Max Current DC","unit":"A","type":"number"},
@@ -17,11 +17,11 @@
     {"id":6,"name":"Conversion Efficiency","unit":"%","type":"number"}
   ],
   "M": [
-    {"id":1,"name":"Total Power","unit":"kw","type":"number"},
-    {"id":2,"name":"DC Power","unit":"kw","type":"number"},
-    {"id":3,"name":"Power A","unit":"kw","type":"number"},
-    {"id":4,"name":"Power B","unit":"kw","type":"number"},
-    {"id":5,"name":"Power C","unit":"kw","type":"number"},
+    {"id":1,"name":"Total Power","unit":"kW","type":"number"},
+    {"id":2,"name":"DC Power","unit":"kW","type":"number"},
+    {"id":3,"name":"Power A","unit":"kW","type":"number"},
+    {"id":4,"name":"Power B","unit":"kW","type":"number"},
+    {"id":5,"name":"Power C","unit":"kW","type":"number"},
     {"id":6,"name":"DC Voltage","unit":"V","type":"number"},
     {"id":7,"name":"Voltage A","unit":"V","type":"number"},
     {"id":8,"name":"Voltage B","unit":"V","type":"number"},
@@ -38,7 +38,7 @@
   "A": [
     {"id":1,"name":"Start","unit":"","type":"string"},
     {"id":2,"name":"Stop","unit":"","type":"string"},
-    {"id":3,"name":"Power Set","unit":"kw","type":"number"},
+    {"id":3,"name":"Power Set","unit":"kW","type":"number"},
     {"id":4,"name":"Off On Grid","unit":"","type":"string"},
     {"id":5,"name":"Clear Error","unit":"","type":"string"}
   ]
