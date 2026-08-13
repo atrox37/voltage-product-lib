@@ -1,6 +1,6 @@
 {
   "name": "AC_Inverter",
-  "pName": "Generator",
+  "pName": "Inverter",
   "canCreateInstance": true,
   "topology": {
     "enabled": true,

@@ -12,8 +12,8 @@
         "name": "Meter",
         "image": "device-Meter.png",
         "selectableProductTypes": [
-          "Single Phase Load",
-          "Three Phase Load"
+          "Single_Phase_Load",
+          "Three_Phase_Load"
         ]
       }
     ]

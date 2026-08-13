@@ -1,0 +1,11 @@
+{
+  "name": "Inverter",
+  "pName": "Station",
+  "canCreateInstance": false,
+  "topology": {
+    "enabled": false
+  },
+  "P": [],
+  "M": [],
+  "A": []
+}
