@@ -29,7 +29,8 @@ Station (场站)
   "topology": {
     "enabled": true,
     "type": "standalone",
-    "image": "battery.svg"
+    "image": "battery.svg",
+    "connectableProducts": ["Hybrid_Inverter", "PCS"]
   },
   "P": [{"id": 1, "name": "Max Power", "unit": "kw", "type": "number"}],
   "M": [{"id": 1, "name": "SOC", "unit": "%", "type": "number"}],
@@ -58,9 +59,25 @@ Station (场站)
   "enabled": true,
   "type": "standalone",
   "image": "battery.svg",
+  "connectableProducts": ["Hybrid_Inverter", "PCS"],
   "components": []
 }
 ```
+
+### 连线兼容规则
+
+`connectableProducts` 用于声明当前产品可与哪些具体产品建立拓扑连线。
+
+```json
+"connectableProducts": ["PCS", "Single_Phase_Load", "Three_Phase_Load"]
+```
+
+- 仅在 `topology.enabled: true` 的产品上配置该字段。
+- 数组元素按产品 `name` 精确匹配；不支持产品族、`pName` 或名称模糊匹配。
+- 产品库只需在一侧维护规则。消费端读取后必须将其归一化为无向关系：`A` 声明可连接 `B`，即允许 `A—B` 与 `B—A`。
+- 当前版本仅有一种无方向边；`connectableProducts` 不表示电流方向、端口或边类型。
+- 未配置该字段不主动声明可连接目标，但仍可被其他产品的规则匹配。
+- 同一产品不可连接自身。
 
 支持四种类型：
 

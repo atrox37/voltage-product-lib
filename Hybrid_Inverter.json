@@ -6,6 +6,7 @@
     "enabled": true,
     "type": "composite",
     "image": "device-HybridInverter.png",
+    "connectableProducts": ["Distribution_Board"],
     "components": [
       {"productName": "Battery"},
       {"productName": "PCS"}

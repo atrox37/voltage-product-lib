@@ -1,6 +1,6 @@
 {
   "name": "HVAC_Load",
-  "pName": "Station",
+  "pName": "Load",
   "canCreateInstance": true,
   "topology": {
     "enabled": true,

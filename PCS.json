@@ -5,7 +5,8 @@
   "topology": {
     "enabled": true,
     "type": "standalone",
-    "image": "device-PCS.png"
+    "image": "device-PCS.png",
+    "connectableProducts": ["Distribution_Board"]
   },
   "P": [
     {"id":1,"name":"Max Power","unit":"kw","type":"number"},
