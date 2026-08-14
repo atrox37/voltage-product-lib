@@ -1,6 +1,6 @@
 {
   "name": "Hybrid_Inverter",
-  "pName": "ESS",
+  "pName": "Inverter",
   "canCreateInstance": true,
   "topology": {
     "enabled": true,
@@ -8,7 +8,7 @@
     "image": "device-HybridInverter.png",
     "connectableProducts": ["Distribution_Board"],
     "components": [
-      {"productName": "Battery"},
+      {"productName": "AC_Inverter"},
       {"productName": "PCS"}
     ]
   },
