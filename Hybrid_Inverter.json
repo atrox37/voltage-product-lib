@@ -29,7 +29,7 @@
     ],
     "description": "One Meter connection is required. PV Group and Battery connections are optional and remain subject to peer rules."
   },
-  "display": [
+  "defaultDisplayMeasureIds": [
     1,
     2,
     3,

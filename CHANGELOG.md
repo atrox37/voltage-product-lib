@@ -21,7 +21,7 @@ Version identifiers use the release date in `YYYY-MM-DD` format. New entries are
 - Removed product-level `pName` and `canCreateInstance` fields.
 - Removed topology `enabled`, `type`, `components`, and `connectableProducts` fields.
 - Standardized all retained topology products as independent device nodes; `Hybrid_Inverter` is represented as one device instead of a Composite with internal nodes.
-- Added product `type`, product descriptions, and flat default `display` measurement lists.
+- Added product `type`, product descriptions, and flat default `defaultDisplayMeasureIds` measurement lists.
 - Kept the existing Battery P/M/A point IDs and definitions; this release only adds description metadata.
 
 ### Field changes
@@ -32,7 +32,7 @@ Version identifiers use the release date in `YYYY-MM-DD` format. New entries are
 | Product | `description` | Added or standardized | English product description without unit text. |
 | Product | `pName` | Removed | The stable product identifier is `name`. |
 | Product | `canCreateInstance` | Removed | All retained device products use the same standalone-node model. |
-| Product | `display` | Changed | Flat list of 3–5 Measure IDs; no primary/detail hierarchy. |
+| Product | `defaultDisplayMeasureIds` | Added | Flat list of 3–5 default Measure IDs; no primary/detail hierarchy. |
 | Topology | `topology.image` | Retained | Product image resource reference. |
 | Topology | `topology.connections` | Added | Node-wide connection-rule groups. |
 | Topology | `topology.description` | Added | English business explanation displayed below the connection-rule tooltip. |

@@ -22,11 +22,11 @@
     ],
     "description": "One Meter connection is required. PV Group connections are optional and remain subject to peer rules."
   },
-  "display": [
+  "defaultDisplayMeasureIds": [
     1,
     2,
-    14,
-    15,
+    16,
+    17,
     18
   ],
   "P": [

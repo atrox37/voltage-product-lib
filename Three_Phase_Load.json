@@ -16,12 +16,12 @@
     ],
     "description": "One Meter connection is required."
   },
-  "display": [
+  "defaultDisplayMeasureIds": [
     1,
+    2,
     3,
-    4,
     14,
-    15
+    18
   ],
   "P": [
     {

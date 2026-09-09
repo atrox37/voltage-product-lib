@@ -15,7 +15,7 @@
     ],
     "description": "One Meter connection is required."
   },
-  "display": [
+  "defaultDisplayMeasureIds": [
     1,
     2,
     3,

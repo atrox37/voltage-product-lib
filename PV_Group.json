@@ -16,11 +16,11 @@
     ],
     "description": "Connect to exactly one Hybrid Inverter or AC Inverter across this group."
   },
-  "display": [
+  "defaultDisplayMeasureIds": [
     7,
-    8,
-    9,
     5,
+    15,
+    8,
     6
   ],
   "P": [

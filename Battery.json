@@ -16,12 +16,12 @@
     ],
     "description": "Connect to exactly one Hybrid Inverter or PCS across this group."
   },
-  "display": [
+  "defaultDisplayMeasureIds": [
     7,
     1,
-    2,
     5,
-    6
+    6,
+    11
   ],
   "P": [
     {

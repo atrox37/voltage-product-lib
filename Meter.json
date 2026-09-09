@@ -22,12 +22,12 @@
     ],
     "description": "May connect to inverters, PCS, diesel generators, and loads. No connection is required by this product."
   },
-  "display": [
+  "defaultDisplayMeasureIds": [
     1,
     3,
     4,
     14,
-    15
+    18
   ],
   "P": [
     {

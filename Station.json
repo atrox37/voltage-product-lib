@@ -2,7 +2,7 @@
   "name": "Station",
   "type": "Station",
   "description": "Station profile with location, scenario settings, and station-level measurements.",
-  "display": [
+  "defaultDisplayMeasureIds": [
     1,
     2
   ],
