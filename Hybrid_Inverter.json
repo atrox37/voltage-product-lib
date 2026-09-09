@@ -1,18 +1,248 @@
 {
   "name": "Hybrid_Inverter",
-  "pName": "Inverter",
-  "canCreateInstance": true,
+  "type": "Inverter",
+  "description": "Off-grid hybrid inverter combining PV conversion and battery power conversion functions.",
   "topology": {
-    "enabled": true,
-    "type": "composite",
     "image": "device-HybridInverter.png",
-    "connectableProducts": ["Distribution_Board"],
-    "components": [
-      {"productName": "AC_Inverter"},
-      {"productName": "PCS"}
-    ]
+    "connections": [
+      {
+        "products": [
+          "PV_Group"
+        ],
+        "min": 0,
+        "max": null
+      },
+      {
+        "products": [
+          "Battery"
+        ],
+        "min": 0,
+        "max": null
+      },
+      {
+        "products": [
+          "Meter"
+        ],
+        "min": 1,
+        "max": 1
+      }
+    ],
+    "description": "One Meter connection is required. PV Group and Battery connections are optional and remain subject to peer rules."
   },
-  "P": [],
-  "M": [],
-  "A": []
+  "display": [
+    1,
+    2,
+    3,
+    6,
+    28
+  ],
+  "P": [
+    {
+      "id": 1,
+      "name": "Rated AC Power",
+      "unit": "kW",
+      "type": "number",
+      "description": "Configuration for Rated AC Power."
+    },
+    {
+      "id": 2,
+      "name": "Rated AC Voltage",
+      "unit": "V",
+      "type": "number",
+      "description": "Configuration for Rated AC Voltage."
+    },
+    {
+      "id": 3,
+      "name": "Rated Frequency",
+      "unit": "Hz",
+      "type": "number",
+      "description": "Configuration for Rated Frequency."
+    },
+    {
+      "id": 4,
+      "name": "Max PV Input Power",
+      "unit": "kW",
+      "type": "number",
+      "description": "Configuration for Max PV Input Power."
+    },
+    {
+      "id": 5,
+      "name": "Max PV Input Voltage",
+      "unit": "V",
+      "type": "number",
+      "description": "Configuration for Max PV Input Voltage."
+    },
+    {
+      "id": 6,
+      "name": "MPPT Count",
+      "unit": "",
+      "type": "number",
+      "description": "Configuration for MPPT Count."
+    },
+    {
+      "id": 7,
+      "name": "Nominal Battery Voltage",
+      "unit": "V",
+      "type": "number",
+      "description": "Configuration for Nominal Battery Voltage."
+    },
+    {
+      "id": 8,
+      "name": "Max Battery Charge Power",
+      "unit": "kW",
+      "type": "number",
+      "description": "Configuration for Max Battery Charge Power."
+    },
+    {
+      "id": 9,
+      "name": "Max Battery Discharge Power",
+      "unit": "kW",
+      "type": "number",
+      "description": "Configuration for Max Battery Discharge Power."
+    }
+  ],
+  "M": [
+    {
+      "id": 1,
+      "name": "Inverter AC Output Power",
+      "unit": "kW",
+      "type": "number",
+      "description": "Measurement for Inverter AC Output Power."
+    },
+    {
+      "id": 2,
+      "name": "PV Input Power",
+      "unit": "kW",
+      "type": "number",
+      "description": "Measurement for PV Input Power."
+    },
+    {
+      "id": 3,
+      "name": "Battery Power",
+      "unit": "kW",
+      "type": "number",
+      "description": "Measurement for Battery Power."
+    },
+    {
+      "id": 4,
+      "name": "Battery Voltage",
+      "unit": "V",
+      "type": "number",
+      "description": "Measurement for Battery Voltage."
+    },
+    {
+      "id": 5,
+      "name": "Battery Current",
+      "unit": "A",
+      "type": "number",
+      "description": "Measurement for Battery Current."
+    },
+    {
+      "id": 6,
+      "name": "Battery SOC",
+      "unit": "%",
+      "type": "number",
+      "description": "Measurement for Battery SOC."
+    },
+    {
+      "id": 8,
+      "name": "Load Power",
+      "unit": "kW",
+      "type": "number",
+      "description": "Measurement for Load Power."
+    },
+    {
+      "id": 11,
+      "name": "Inverter Output Frequency",
+      "unit": "Hz",
+      "type": "number",
+      "description": "Measurement for Inverter Output Frequency."
+    },
+    {
+      "id": 13,
+      "name": "Heat Sink Temperature",
+      "unit": "℃",
+      "type": "number",
+      "description": "Measurement for Heat Sink Temperature."
+    },
+    {
+      "id": 15,
+      "name": "PV Energy Today",
+      "unit": "kWh",
+      "type": "number",
+      "description": "Measurement for PV Energy Today."
+    },
+    {
+      "id": 16,
+      "name": "PV Energy Total",
+      "unit": "kWh",
+      "type": "number",
+      "description": "Measurement for PV Energy Total."
+    },
+    {
+      "id": 18,
+      "name": "Battery Charge Energy Total",
+      "unit": "kWh",
+      "type": "number",
+      "description": "Measurement for Battery Charge Energy Total."
+    },
+    {
+      "id": 20,
+      "name": "Battery Discharge Energy Total",
+      "unit": "kWh",
+      "type": "number",
+      "description": "Measurement for Battery Discharge Energy Total."
+    },
+    {
+      "id": 27,
+      "name": "Operating Status",
+      "unit": "",
+      "type": "string",
+      "description": "Measurement for Operating Status.",
+      "options": [
+        "unknown",
+        "standby",
+        "running",
+        "stopped",
+        "fault"
+      ]
+    },
+    {
+      "id": 28,
+      "name": "Start Stop Status",
+      "unit": "",
+      "type": "number",
+      "description": "Measurement for Start Stop Status."
+    }
+  ],
+  "A": [
+    {
+      "id": 1,
+      "name": "Start",
+      "unit": "",
+      "type": "string",
+      "description": "Command for Start."
+    },
+    {
+      "id": 2,
+      "name": "Stop",
+      "unit": "",
+      "type": "string",
+      "description": "Command for Stop."
+    },
+    {
+      "id": 3,
+      "name": "Active Power Setpoint",
+      "unit": "kW",
+      "type": "number",
+      "description": "Command for Active Power Setpoint."
+    },
+    {
+      "id": 4,
+      "name": "Battery Power Setpoint",
+      "unit": "kW",
+      "type": "number",
+      "description": "Command for Battery Power Setpoint."
+    }
+  ]
 }

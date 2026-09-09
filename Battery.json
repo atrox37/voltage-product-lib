@@ -1,61 +1,340 @@
 {
   "name": "Battery",
-  "pName": "ESS",
-  "canCreateInstance": true,
+  "type": "ESS",
+  "description": "Battery energy storage device with capacity, operating limits, and runtime measurements.",
   "topology": {
-    "enabled": true,
-    "type": "standalone",
     "image": "device-Battery.png",
-    "connectableProducts": ["Hybrid_Inverter", "PCS"]
+    "connections": [
+      {
+        "products": [
+          "Hybrid_Inverter",
+          "PCS"
+        ],
+        "min": 1,
+        "max": 1
+      }
+    ],
+    "description": "Connect to exactly one Hybrid Inverter or PCS across this group."
   },
+  "display": [
+    7,
+    1,
+    2,
+    5,
+    6
+  ],
   "P": [
-    {"id":1,"name":"Max Power","unit":"kW","type":"number"},
-    {"id":2,"name":"Max Voltage","unit":"V","type":"number"},
-    {"id":3,"name":"Max Current","unit":"A","type":"number"},
-    {"id":4,"name":"Max Capacity","unit":"kWh","type":"number"},
-    {"id":5,"name":"Battery Pack Count","unit":"","type":"number"},
-    {"id":6,"name":"Cell Count","unit":"","type":"number"},
-    {"id":7,"name":"Temperature Count","unit":"","type":"number"},
-    {"id":8,"name":"Min Power","unit":"kW","type":"number"},
-    {"id":9,"name":"Min SOC","unit":"%","type":"number"},
-    {"id":10,"name":"Max SOC","unit":"%","type":"number"},
-    {"id":11,"name":"Charge Efficiency","unit":"%","type":"number"},
-    {"id":12,"name":"Discharge Efficiency","unit":"%","type":"number"}
+    {
+      "id": 1,
+      "name": "Max Power",
+      "unit": "kW",
+      "type": "number",
+      "description": "Configuration for Max Power."
+    },
+    {
+      "id": 2,
+      "name": "Max Voltage",
+      "unit": "V",
+      "type": "number",
+      "description": "Configuration for Max Voltage."
+    },
+    {
+      "id": 3,
+      "name": "Max Current",
+      "unit": "A",
+      "type": "number",
+      "description": "Configuration for Max Current."
+    },
+    {
+      "id": 4,
+      "name": "Max Capacity",
+      "unit": "kWh",
+      "type": "number",
+      "description": "Configuration for Max Capacity."
+    },
+    {
+      "id": 5,
+      "name": "Battery Pack Count",
+      "unit": "",
+      "type": "number",
+      "description": "Configuration for Battery Pack Count."
+    },
+    {
+      "id": 6,
+      "name": "Cell Count",
+      "unit": "",
+      "type": "number",
+      "description": "Configuration for Cell Count."
+    },
+    {
+      "id": 7,
+      "name": "Temperature Count",
+      "unit": "",
+      "type": "number",
+      "description": "Configuration for Temperature Count."
+    },
+    {
+      "id": 8,
+      "name": "Min Power",
+      "unit": "kW",
+      "type": "number",
+      "description": "Configuration for Min Power."
+    },
+    {
+      "id": 9,
+      "name": "Min SOC",
+      "unit": "%",
+      "type": "number",
+      "description": "Configuration for Min SOC."
+    },
+    {
+      "id": 10,
+      "name": "Max SOC",
+      "unit": "%",
+      "type": "number",
+      "description": "Configuration for Max SOC."
+    },
+    {
+      "id": 11,
+      "name": "Charge Efficiency",
+      "unit": "%",
+      "type": "number",
+      "description": "Configuration for Charge Efficiency."
+    },
+    {
+      "id": 12,
+      "name": "Discharge Efficiency",
+      "unit": "%",
+      "type": "number",
+      "description": "Configuration for Discharge Efficiency."
+    }
   ],
   "M": [
-    {"id":1,"name":"Total Voltage","unit":"V","type":"number"},
-    {"id":2,"name":"Total Current","unit":"A","type":"number"},
-    {"id":3,"name":"Max Battery Pack Temperature","unit":"℃","type":"number"},
-    {"id":4,"name":"Min Battery Pack Temperature","unit":"℃","type":"number"},
-    {"id":5,"name":"Charge Power","unit":"kW","type":"number"},
-    {"id":6,"name":"Discharge Power","unit":"kW","type":"number"},
-    {"id":7,"name":"SOC","unit":"%","type":"number"},
-    {"id":8,"name":"SOH","unit":"%","type":"number"},
-    {"id":9,"name":"Charge Energy","unit":"kWh","type":"number"},
-    {"id":10,"name":"Discharge Energy","unit":"kWh","type":"number"},
-    {"id":11,"name":"Charge Discharge Status","unit":"","type":"number"},
-    {"id":12,"name":"Max Cell Voltage","unit":"V","type":"number"},
-    {"id":13,"name":"Min Cell Voltage","unit":"V","type":"number"},
-    {"id":14,"name":"Avg Cell Voltage","unit":"V","type":"number"},
-    {"id":15,"name":"Cell Voltage Difference","unit":"V","type":"number"},
-    {"id":16,"name":"Avg Cell Temperature","unit":"℃","type":"number"},
-    {"id":17,"name":"Cell Voltage Array","unit":"V","type":"number"},
-    {"id":18,"name":"Cell Temperature Array","unit":"℃","type":"number"},
-    {"id":19,"name":"Battery System","unit":"%","type":"number"},
-    {"id":20,"name":"Charge Energy Today","unit":"kWh","type":"number"},
-    {"id":21,"name":"Discharge Energy Today","unit":"kWh","type":"number"},
-    {"id":101,"name":"Daily Charge Energy","unit":"kWh","type":"number"},
-    {"id":102,"name":"Daily Discharge Energy","unit":"kWh","type":"number"},
-    {"id":103,"name":"Weekly Charge Energy","unit":"kWh","type":"number"},
-    {"id":104,"name":"Weekly Discharge Energy","unit":"kWh","type":"number"},
-    {"id":105,"name":"Monthly Charge Energy","unit":"kWh","type":"number"},
-    {"id":106,"name":"Monthly Discharge Energy","unit":"kWh","type":"number"},
-    {"id":107,"name":"Quarterly Charge Energy","unit":"kWh","type":"number"},
-    {"id":108,"name":"Quarterly Discharge Energy","unit":"kWh","type":"number"}
+    {
+      "id": 1,
+      "name": "Total Voltage",
+      "unit": "V",
+      "type": "number",
+      "description": "Measurement for Total Voltage."
+    },
+    {
+      "id": 2,
+      "name": "Total Current",
+      "unit": "A",
+      "type": "number",
+      "description": "Measurement for Total Current."
+    },
+    {
+      "id": 3,
+      "name": "Max Battery Pack Temperature",
+      "unit": "℃",
+      "type": "number",
+      "description": "Measurement for Max Battery Pack Temperature."
+    },
+    {
+      "id": 4,
+      "name": "Min Battery Pack Temperature",
+      "unit": "℃",
+      "type": "number",
+      "description": "Measurement for Min Battery Pack Temperature."
+    },
+    {
+      "id": 5,
+      "name": "Charge Power",
+      "unit": "kW",
+      "type": "number",
+      "description": "Measurement for Charge Power."
+    },
+    {
+      "id": 6,
+      "name": "Discharge Power",
+      "unit": "kW",
+      "type": "number",
+      "description": "Measurement for Discharge Power."
+    },
+    {
+      "id": 7,
+      "name": "SOC",
+      "unit": "%",
+      "type": "number",
+      "description": "Measurement for SOC."
+    },
+    {
+      "id": 8,
+      "name": "SOH",
+      "unit": "%",
+      "type": "number",
+      "description": "Measurement for SOH."
+    },
+    {
+      "id": 9,
+      "name": "Charge Energy",
+      "unit": "kWh",
+      "type": "number",
+      "description": "Measurement for Charge Energy."
+    },
+    {
+      "id": 10,
+      "name": "Discharge Energy",
+      "unit": "kWh",
+      "type": "number",
+      "description": "Measurement for Discharge Energy."
+    },
+    {
+      "id": 11,
+      "name": "Charge Discharge Status",
+      "unit": "",
+      "type": "number",
+      "description": "Measurement for Charge Discharge Status."
+    },
+    {
+      "id": 12,
+      "name": "Max Cell Voltage",
+      "unit": "V",
+      "type": "number",
+      "description": "Measurement for Max Cell Voltage."
+    },
+    {
+      "id": 13,
+      "name": "Min Cell Voltage",
+      "unit": "V",
+      "type": "number",
+      "description": "Measurement for Min Cell Voltage."
+    },
+    {
+      "id": 14,
+      "name": "Avg Cell Voltage",
+      "unit": "V",
+      "type": "number",
+      "description": "Measurement for Avg Cell Voltage."
+    },
+    {
+      "id": 15,
+      "name": "Cell Voltage Difference",
+      "unit": "V",
+      "type": "number",
+      "description": "Measurement for Cell Voltage Difference."
+    },
+    {
+      "id": 16,
+      "name": "Avg Cell Temperature",
+      "unit": "℃",
+      "type": "number",
+      "description": "Measurement for Avg Cell Temperature."
+    },
+    {
+      "id": 17,
+      "name": "Cell Voltage Array",
+      "unit": "V",
+      "type": "number",
+      "description": "Measurement for Cell Voltage Array."
+    },
+    {
+      "id": 18,
+      "name": "Cell Temperature Array",
+      "unit": "℃",
+      "type": "number",
+      "description": "Measurement for Cell Temperature Array."
+    },
+    {
+      "id": 19,
+      "name": "Battery System",
+      "unit": "%",
+      "type": "number",
+      "description": "Measurement for Battery System."
+    },
+    {
+      "id": 20,
+      "name": "Charge Energy Today",
+      "unit": "kWh",
+      "type": "number",
+      "description": "Measurement for Charge Energy Today."
+    },
+    {
+      "id": 21,
+      "name": "Discharge Energy Today",
+      "unit": "kWh",
+      "type": "number",
+      "description": "Measurement for Discharge Energy Today."
+    },
+    {
+      "id": 101,
+      "name": "Daily Charge Energy",
+      "unit": "kWh",
+      "type": "number",
+      "description": "Measurement for Daily Charge Energy."
+    },
+    {
+      "id": 102,
+      "name": "Daily Discharge Energy",
+      "unit": "kWh",
+      "type": "number",
+      "description": "Measurement for Daily Discharge Energy."
+    },
+    {
+      "id": 103,
+      "name": "Weekly Charge Energy",
+      "unit": "kWh",
+      "type": "number",
+      "description": "Measurement for Weekly Charge Energy."
+    },
+    {
+      "id": 104,
+      "name": "Weekly Discharge Energy",
+      "unit": "kWh",
+      "type": "number",
+      "description": "Measurement for Weekly Discharge Energy."
+    },
+    {
+      "id": 105,
+      "name": "Monthly Charge Energy",
+      "unit": "kWh",
+      "type": "number",
+      "description": "Measurement for Monthly Charge Energy."
+    },
+    {
+      "id": 106,
+      "name": "Monthly Discharge Energy",
+      "unit": "kWh",
+      "type": "number",
+      "description": "Measurement for Monthly Discharge Energy."
+    },
+    {
+      "id": 107,
+      "name": "Quarterly Charge Energy",
+      "unit": "kWh",
+      "type": "number",
+      "description": "Measurement for Quarterly Charge Energy."
+    },
+    {
+      "id": 108,
+      "name": "Quarterly Discharge Energy",
+      "unit": "kWh",
+      "type": "number",
+      "description": "Measurement for Quarterly Discharge Energy."
+    }
   ],
   "A": [
-    {"id":1,"name":"Start","unit":"","type":"string"},
-    {"id":2,"name":"Stop","unit":"","type":"string"},
-    {"id":3,"name":"Clear Error","unit":"","type":"string"}
+    {
+      "id": 1,
+      "name": "Start",
+      "unit": "",
+      "type": "string",
+      "description": "Command for Start."
+    },
+    {
+      "id": 2,
+      "name": "Stop",
+      "unit": "",
+      "type": "string",
+      "description": "Command for Stop."
+    },
+    {
+      "id": 3,
+      "name": "Clear Error",
+      "unit": "",
+      "type": "string",
+      "description": "Command for Clear Error."
+    }
   ]
 }

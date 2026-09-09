@@ -1,45 +1,228 @@
 {
   "name": "PV_Group",
-  "pName": "Generator",
-  "canCreateInstance": true,
+  "type": "Generator",
+  "description": "PV array with configuration, generation measurements, and operating controls.",
   "topology": {
-    "enabled": true,
-    "type": "standalone",
     "image": "device-PVGroup.png",
-    "connectableProducts": ["Hybrid_Inverter", "AC_Inverter"]
+    "connections": [
+      {
+        "products": [
+          "Hybrid_Inverter",
+          "AC_Inverter"
+        ],
+        "min": 1,
+        "max": 1
+      }
+    ],
+    "description": "Connect to exactly one Hybrid Inverter or AC Inverter across this group."
   },
+  "display": [
+    7,
+    8,
+    9,
+    5,
+    6
+  ],
   "P": [
-    { "id": 1, "name": "Max Power", "unit": "kw", "type": "number" },
-    { "id": 2, "name": "Max Voltage", "unit": "V", "type": "number" },
-    { "id": 3, "name": "Max Current", "unit": "A", "type": "number" },
-    { "id": 4, "name": "Station", "unit": "", "type": "string" },
-    { "id": 5, "name": "String Count", "unit": "", "type": "number" },
-    { "id": 6, "name": "Cell type", "unit": "", "type": "string" },
-    { "id": 7, "name": "Tracking method", "unit": "", "type": "string" },
-    { "id": 8, "name": "Tilt angle", "unit": "", "type": "number" },
-    { "id": 9, "name": "Azimuth angle", "unit": "", "type": "number" }
+    {
+      "id": 1,
+      "name": "Max Power",
+      "unit": "kw",
+      "type": "number",
+      "description": "Configuration for Max Power."
+    },
+    {
+      "id": 2,
+      "name": "Max Voltage",
+      "unit": "V",
+      "type": "number",
+      "description": "Configuration for Max Voltage."
+    },
+    {
+      "id": 3,
+      "name": "Max Current",
+      "unit": "A",
+      "type": "number",
+      "description": "Configuration for Max Current."
+    },
+    {
+      "id": 4,
+      "name": "Station",
+      "unit": "",
+      "type": "string",
+      "description": "Configuration for Station."
+    },
+    {
+      "id": 5,
+      "name": "String Count",
+      "unit": "",
+      "type": "number",
+      "description": "Configuration for String Count."
+    },
+    {
+      "id": 6,
+      "name": "Cell type",
+      "unit": "",
+      "type": "string",
+      "description": "Configuration for Cell type."
+    },
+    {
+      "id": 7,
+      "name": "Tracking method",
+      "unit": "",
+      "type": "string",
+      "description": "Configuration for Tracking method."
+    },
+    {
+      "id": 8,
+      "name": "Tilt angle",
+      "unit": "",
+      "type": "number",
+      "description": "Configuration for Tilt angle."
+    },
+    {
+      "id": 9,
+      "name": "Azimuth angle",
+      "unit": "",
+      "type": "number",
+      "description": "Configuration for Azimuth angle."
+    }
   ],
   "M": [
-    { "id": 1, "name": "PV Power (Array)", "unit": "kw", "type": "number" },
-    { "id": 2, "name": "PV Voltage (Array)", "unit": "V", "type": "number" },
-    { "id": 3, "name": "PV Current (Array)", "unit": "A", "type": "number" },
-    { "id": 4, "name": "Sub PVI", "unit": "kw", "type": "number" },
-    { "id": 5, "name": "Energy Today", "unit": "kwh", "type": "number" },
-    { "id": 6, "name": "Start Stop Status", "unit": "", "type": "number" },
-    { "id": 7, "name": "PV Power", "unit": "kw", "type": "number" },
-    { "id": 8, "name": "PV Voltage", "unit": "V", "type": "number" },
-    { "id": 9, "name": "PV Current", "unit": "A", "type": "number" },
-    { "id": 10, "name": "Peak Efficiency", "unit": "%", "type": "number" },
-    { "id": 11, "name": "Average Efficiency", "unit": "%", "type": "number" },
-    { "id": 12, "name": "Minimum Efficiency", "unit": "%", "type": "number" },
-    { "id": 13, "name": "Solar Panels", "unit": "%", "type": "number" },
-    { "id": 14, "name": "PV System", "unit": "%", "type": "number" },
-    { "id": 15, "name": "Energy Total", "unit": "kwh", "type": "number" }
+    {
+      "id": 1,
+      "name": "PV Power (Array)",
+      "unit": "kw",
+      "type": "number",
+      "description": "Measurement for PV Power (Array)."
+    },
+    {
+      "id": 2,
+      "name": "PV Voltage (Array)",
+      "unit": "V",
+      "type": "number",
+      "description": "Measurement for PV Voltage (Array)."
+    },
+    {
+      "id": 3,
+      "name": "PV Current (Array)",
+      "unit": "A",
+      "type": "number",
+      "description": "Measurement for PV Current (Array)."
+    },
+    {
+      "id": 4,
+      "name": "Sub PVI",
+      "unit": "kw",
+      "type": "number",
+      "description": "Measurement for Sub PVI."
+    },
+    {
+      "id": 5,
+      "name": "Energy Today",
+      "unit": "kwh",
+      "type": "number",
+      "description": "Measurement for Energy Today."
+    },
+    {
+      "id": 6,
+      "name": "Start Stop Status",
+      "unit": "",
+      "type": "number",
+      "description": "Measurement for Start Stop Status."
+    },
+    {
+      "id": 7,
+      "name": "PV Power",
+      "unit": "kw",
+      "type": "number",
+      "description": "Measurement for PV Power."
+    },
+    {
+      "id": 8,
+      "name": "PV Voltage",
+      "unit": "V",
+      "type": "number",
+      "description": "Measurement for PV Voltage."
+    },
+    {
+      "id": 9,
+      "name": "PV Current",
+      "unit": "A",
+      "type": "number",
+      "description": "Measurement for PV Current."
+    },
+    {
+      "id": 10,
+      "name": "Peak Efficiency",
+      "unit": "%",
+      "type": "number",
+      "description": "Measurement for Peak Efficiency."
+    },
+    {
+      "id": 11,
+      "name": "Average Efficiency",
+      "unit": "%",
+      "type": "number",
+      "description": "Measurement for Average Efficiency."
+    },
+    {
+      "id": 12,
+      "name": "Minimum Efficiency",
+      "unit": "%",
+      "type": "number",
+      "description": "Measurement for Minimum Efficiency."
+    },
+    {
+      "id": 13,
+      "name": "Solar Panels",
+      "unit": "%",
+      "type": "number",
+      "description": "Measurement for Solar Panels."
+    },
+    {
+      "id": 14,
+      "name": "PV System",
+      "unit": "%",
+      "type": "number",
+      "description": "Measurement for PV System."
+    },
+    {
+      "id": 15,
+      "name": "Energy Total",
+      "unit": "kwh",
+      "type": "number",
+      "description": "Measurement for Energy Total."
+    }
   ],
   "A": [
-    { "id": 1, "name": "Start", "unit": "", "type": "string" },
-    { "id": 2, "name": "Stop", "unit": "", "type": "string" },
-    { "id": 3, "name": "Power Set", "unit": "kw", "type": "number" },
-    { "id": 4, "name": "Clear Error", "unit": "", "type": "string" }
+    {
+      "id": 1,
+      "name": "Start",
+      "unit": "",
+      "type": "string",
+      "description": "Command for Start."
+    },
+    {
+      "id": 2,
+      "name": "Stop",
+      "unit": "",
+      "type": "string",
+      "description": "Command for Stop."
+    },
+    {
+      "id": 3,
+      "name": "Power Set",
+      "unit": "kw",
+      "type": "number",
+      "description": "Command for Power Set."
+    },
+    {
+      "id": 4,
+      "name": "Clear Error",
+      "unit": "",
+      "type": "string",
+      "description": "Command for Clear Error."
+    }
   ]
 }

@@ -1,21 +1,76 @@
 {
   "name": "Station",
-  "canCreateInstance": true,
-  "topology": {
-    "enabled": true,
-    "type": "top-level"
-  },
+  "type": "Station",
+  "description": "Station profile with location, scenario settings, and station-level measurements.",
+  "display": [
+    1,
+    2
+  ],
   "P": [
-    {"id":1,"name":"Rated Capacity","unit":"","type":"string"},
-    {"id":2,"name":"Longitude","unit":"","type":"string"},
-    {"id":3,"name":"Latitude","unit":"","type":"string"},
-    {"id":4,"name":"Altitude","unit":"m","type":"number"},
-    {"id":5,"name":"Station Type","unit":"","type":"string","options":["residential","commercial","industrial","datacenter"]},
-    {"id":6,"name":"Scenario Parameters","unit":"","type":"string"}
+    {
+      "id": 1,
+      "name": "Rated Capacity",
+      "unit": "",
+      "type": "string",
+      "description": "Configuration for Rated Capacity."
+    },
+    {
+      "id": 2,
+      "name": "Longitude",
+      "unit": "",
+      "type": "string",
+      "description": "Configuration for Longitude."
+    },
+    {
+      "id": 3,
+      "name": "Latitude",
+      "unit": "",
+      "type": "string",
+      "description": "Configuration for Latitude."
+    },
+    {
+      "id": 4,
+      "name": "Altitude",
+      "unit": "m",
+      "type": "number",
+      "description": "Configuration for Altitude."
+    },
+    {
+      "id": 5,
+      "name": "Station Type",
+      "unit": "",
+      "type": "string",
+      "options": [
+        "residential",
+        "commercial",
+        "industrial",
+        "datacenter"
+      ],
+      "description": "Configuration for Station Type."
+    },
+    {
+      "id": 6,
+      "name": "Scenario Parameters",
+      "unit": "",
+      "type": "string",
+      "description": "Configuration for Scenario Parameters."
+    }
   ],
   "M": [
-    {"id":1,"name":"Status","unit":"","type":"number"},
-    {"id":2,"name":"Saving Billing","unit":"$","type":"string"}
+    {
+      "id": 1,
+      "name": "Status",
+      "unit": "",
+      "type": "number",
+      "description": "Measurement for Status."
+    },
+    {
+      "id": 2,
+      "name": "Saving Billing",
+      "unit": "$",
+      "type": "string",
+      "description": "Measurement for Saving Billing."
+    }
   ],
   "A": []
 }

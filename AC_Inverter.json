@@ -1,48 +1,255 @@
 {
   "name": "AC_Inverter",
-  "pName": "Inverter",
-  "canCreateInstance": true,
+  "type": "Inverter",
+  "description": "PV AC inverter with DC input, AC output, and operating controls.",
   "topology": {
-    "enabled": true,
-    "type": "standalone",
     "image": "device-ACInverter.png",
-    "connectableProducts": ["Distribution_Board"]
+    "connections": [
+      {
+        "products": [
+          "PV_Group"
+        ],
+        "min": 0,
+        "max": null
+      },
+      {
+        "products": [
+          "Meter"
+        ],
+        "min": 1,
+        "max": 1
+      }
+    ],
+    "description": "One Meter connection is required. PV Group connections are optional and remain subject to peer rules."
   },
+  "display": [
+    1,
+    2,
+    14,
+    15,
+    18
+  ],
   "P": [
-    {"id":1,"name":"Max Power","unit":"kW","type":"number"},
-    {"id":2,"name":"Max DC Voltage","unit":"V","type":"number"},
-    {"id":3,"name":"Max DC Current","unit":"A","type":"number"},
-    {"id":4,"name":"Rated AC Voltage","unit":"V","type":"number"},
-    {"id":5,"name":"Rated Frequency","unit":"Hz","type":"number"},
-    {"id":6,"name":"String Count","unit":"","type":"number"},
-    {"id":7,"name":"MPPT Count","unit":"","type":"number"},
-    {"id":8,"name":"Phase Count","unit":"","type":"number"}
+    {
+      "id": 1,
+      "name": "Max Power",
+      "unit": "kW",
+      "type": "number",
+      "description": "Configuration for Max Power."
+    },
+    {
+      "id": 2,
+      "name": "Max DC Voltage",
+      "unit": "V",
+      "type": "number",
+      "description": "Configuration for Max DC Voltage."
+    },
+    {
+      "id": 3,
+      "name": "Max DC Current",
+      "unit": "A",
+      "type": "number",
+      "description": "Configuration for Max DC Current."
+    },
+    {
+      "id": 4,
+      "name": "Rated AC Voltage",
+      "unit": "V",
+      "type": "number",
+      "description": "Configuration for Rated AC Voltage."
+    },
+    {
+      "id": 5,
+      "name": "Rated Frequency",
+      "unit": "Hz",
+      "type": "number",
+      "description": "Configuration for Rated Frequency."
+    },
+    {
+      "id": 6,
+      "name": "String Count",
+      "unit": "",
+      "type": "number",
+      "description": "Configuration for String Count."
+    },
+    {
+      "id": 7,
+      "name": "MPPT Count",
+      "unit": "",
+      "type": "number",
+      "description": "Configuration for MPPT Count."
+    },
+    {
+      "id": 8,
+      "name": "Phase Count",
+      "unit": "",
+      "type": "number",
+      "description": "Configuration for Phase Count."
+    }
   ],
   "M": [
-    {"id":1,"name":"Total Power","unit":"kW","type":"number"},
-    {"id":2,"name":"DC Power","unit":"kW","type":"number"},
-    {"id":3,"name":"DC Voltage","unit":"V","type":"number"},
-    {"id":4,"name":"DC Current","unit":"A","type":"number"},
-    {"id":5,"name":"Power A","unit":"kW","type":"number"},
-    {"id":6,"name":"Power B","unit":"kW","type":"number"},
-    {"id":7,"name":"Power C","unit":"kW","type":"number"},
-    {"id":8,"name":"Voltage A","unit":"V","type":"number"},
-    {"id":9,"name":"Voltage B","unit":"V","type":"number"},
-    {"id":10,"name":"Voltage C","unit":"V","type":"number"},
-    {"id":11,"name":"Current A","unit":"A","type":"number"},
-    {"id":12,"name":"Current B","unit":"A","type":"number"},
-    {"id":13,"name":"Current C","unit":"A","type":"number"},
-    {"id":14,"name":"AC Frequency","unit":"Hz","type":"number"},
-    {"id":15,"name":"Temperature","unit":"℃","type":"number"},
-    {"id":16,"name":"Efficiency","unit":"%","type":"number"},
-    {"id":17,"name":"Energy Today","unit":"kWh","type":"number"},
-    {"id":18,"name":"Start Stop Status","unit":"","type":"number"},
-    {"id":19,"name":"Grid Status","unit":"","type":"number"}
+    {
+      "id": 1,
+      "name": "Total Power",
+      "unit": "kW",
+      "type": "number",
+      "description": "Measurement for Total Power."
+    },
+    {
+      "id": 2,
+      "name": "DC Power",
+      "unit": "kW",
+      "type": "number",
+      "description": "Measurement for DC Power."
+    },
+    {
+      "id": 3,
+      "name": "DC Voltage",
+      "unit": "V",
+      "type": "number",
+      "description": "Measurement for DC Voltage."
+    },
+    {
+      "id": 4,
+      "name": "DC Current",
+      "unit": "A",
+      "type": "number",
+      "description": "Measurement for DC Current."
+    },
+    {
+      "id": 5,
+      "name": "Power A",
+      "unit": "kW",
+      "type": "number",
+      "description": "Measurement for Power A."
+    },
+    {
+      "id": 6,
+      "name": "Power B",
+      "unit": "kW",
+      "type": "number",
+      "description": "Measurement for Power B."
+    },
+    {
+      "id": 7,
+      "name": "Power C",
+      "unit": "kW",
+      "type": "number",
+      "description": "Measurement for Power C."
+    },
+    {
+      "id": 8,
+      "name": "Voltage A",
+      "unit": "V",
+      "type": "number",
+      "description": "Measurement for Voltage A."
+    },
+    {
+      "id": 9,
+      "name": "Voltage B",
+      "unit": "V",
+      "type": "number",
+      "description": "Measurement for Voltage B."
+    },
+    {
+      "id": 10,
+      "name": "Voltage C",
+      "unit": "V",
+      "type": "number",
+      "description": "Measurement for Voltage C."
+    },
+    {
+      "id": 11,
+      "name": "Current A",
+      "unit": "A",
+      "type": "number",
+      "description": "Measurement for Current A."
+    },
+    {
+      "id": 12,
+      "name": "Current B",
+      "unit": "A",
+      "type": "number",
+      "description": "Measurement for Current B."
+    },
+    {
+      "id": 13,
+      "name": "Current C",
+      "unit": "A",
+      "type": "number",
+      "description": "Measurement for Current C."
+    },
+    {
+      "id": 14,
+      "name": "AC Frequency",
+      "unit": "Hz",
+      "type": "number",
+      "description": "Measurement for AC Frequency."
+    },
+    {
+      "id": 15,
+      "name": "Temperature",
+      "unit": "℃",
+      "type": "number",
+      "description": "Measurement for Temperature."
+    },
+    {
+      "id": 16,
+      "name": "Efficiency",
+      "unit": "%",
+      "type": "number",
+      "description": "Measurement for Efficiency."
+    },
+    {
+      "id": 17,
+      "name": "Energy Today",
+      "unit": "kWh",
+      "type": "number",
+      "description": "Measurement for Energy Today."
+    },
+    {
+      "id": 18,
+      "name": "Start Stop Status",
+      "unit": "",
+      "type": "number",
+      "description": "Measurement for Start Stop Status."
+    },
+    {
+      "id": 19,
+      "name": "Grid Status",
+      "unit": "",
+      "type": "number",
+      "description": "Measurement for Grid Status."
+    }
   ],
   "A": [
-    {"id":1,"name":"Start","unit":"","type":"string"},
-    {"id":2,"name":"Stop","unit":"","type":"string"},
-    {"id":3,"name":"Power Set","unit":"kW","type":"number"},
-    {"id":4,"name":"Clear Error","unit":"","type":"string"}
+    {
+      "id": 1,
+      "name": "Start",
+      "unit": "",
+      "type": "string",
+      "description": "Command for Start."
+    },
+    {
+      "id": 2,
+      "name": "Stop",
+      "unit": "",
+      "type": "string",
+      "description": "Command for Stop."
+    },
+    {
+      "id": 3,
+      "name": "Power Set",
+      "unit": "kW",
+      "type": "number",
+      "description": "Command for Power Set."
+    },
+    {
+      "id": 4,
+      "name": "Clear Error",
+      "unit": "",
+      "type": "string",
+      "description": "Command for Clear Error."
+    }
   ]
 }

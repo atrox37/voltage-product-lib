@@ -1,46 +1,259 @@
 {
   "name": "HVAC_Load",
-  "pName": "Load",
-  "canCreateInstance": true,
+  "type": "Load",
+  "description": "HVAC load with electrical measurements and operating controls.",
   "topology": {
-    "enabled": true,
-    "type": "standalone",
-    "image": "device-HVACLoad.png"
+    "image": "device-HVACLoad.png",
+    "connections": [
+      {
+        "products": [
+          "Meter"
+        ],
+        "min": 1,
+        "max": 1
+      }
+    ],
+    "description": "One Meter connection is required."
   },
+  "display": [
+    1,
+    9,
+    10,
+    11,
+    12
+  ],
   "P": [
-    {"id":1,"name":"Max Voltage","unit":"V","type":"number"},
-    {"id":2,"name":"Max Current","unit":"A","type":"number"},
-    {"id":3,"name":"Rated Frequency","unit":"Hz","type":"number"},
-    {"id":4,"name":"Max Power","unit":"kW","type":"number"},
-    {"id":5,"name":"Load Flexibility","unit":"","type":"string","options":["rigid","flexible"]},
-    {"id":6,"name":"Adjustable Power Range","unit":"kW","type":"number"},
-    {"id":7,"name":"Response Time","unit":"min","type":"number"},
-    {"id":8,"name":"Min Runtime","unit":"min","type":"number"},
-    {"id":9,"name":"Max Interrupt Time","unit":"min","type":"number"},
-    {"id":10,"name":"Shiftable Time Window","unit":"min","type":"number"},
-    {"id":11,"name":"HVAC Type","unit":"","type":"string","options":["air_conditioner","heat_pump","furnace"]},
-    {"id":12,"name":"Rated Cooling Capacity","unit":"kW","type":"number"},
-    {"id":13,"name":"Rated Heating Capacity","unit":"kW","type":"number"},
-    {"id":14,"name":"Thermal Mass","unit":"kJ/℃","type":"number"},
-    {"id":15,"name":"Heat Transfer Coefficient","unit":"W/℃","type":"number"},
-    {"id":16,"name":"Controlled Area","unit":"m²","type":"number"}
+    {
+      "id": 1,
+      "name": "Max Voltage",
+      "unit": "V",
+      "type": "number",
+      "description": "Configuration for Max Voltage."
+    },
+    {
+      "id": 2,
+      "name": "Max Current",
+      "unit": "A",
+      "type": "number",
+      "description": "Configuration for Max Current."
+    },
+    {
+      "id": 3,
+      "name": "Rated Frequency",
+      "unit": "Hz",
+      "type": "number",
+      "description": "Configuration for Rated Frequency."
+    },
+    {
+      "id": 4,
+      "name": "Max Power",
+      "unit": "kW",
+      "type": "number",
+      "description": "Configuration for Max Power."
+    },
+    {
+      "id": 5,
+      "name": "Load Flexibility",
+      "unit": "",
+      "type": "string",
+      "options": [
+        "rigid",
+        "flexible"
+      ],
+      "description": "Configuration for Load Flexibility."
+    },
+    {
+      "id": 6,
+      "name": "Adjustable Power Range",
+      "unit": "kW",
+      "type": "number",
+      "description": "Configuration for Adjustable Power Range."
+    },
+    {
+      "id": 7,
+      "name": "Response Time",
+      "unit": "min",
+      "type": "number",
+      "description": "Configuration for Response Time."
+    },
+    {
+      "id": 8,
+      "name": "Min Runtime",
+      "unit": "min",
+      "type": "number",
+      "description": "Configuration for Min Runtime."
+    },
+    {
+      "id": 9,
+      "name": "Max Interrupt Time",
+      "unit": "min",
+      "type": "number",
+      "description": "Configuration for Max Interrupt Time."
+    },
+    {
+      "id": 10,
+      "name": "Shiftable Time Window",
+      "unit": "min",
+      "type": "number",
+      "description": "Configuration for Shiftable Time Window."
+    },
+    {
+      "id": 11,
+      "name": "HVAC Type",
+      "unit": "",
+      "type": "string",
+      "options": [
+        "air_conditioner",
+        "heat_pump",
+        "furnace"
+      ],
+      "description": "Configuration for HVAC Type."
+    },
+    {
+      "id": 12,
+      "name": "Rated Cooling Capacity",
+      "unit": "kW",
+      "type": "number",
+      "description": "Configuration for Rated Cooling Capacity."
+    },
+    {
+      "id": 13,
+      "name": "Rated Heating Capacity",
+      "unit": "kW",
+      "type": "number",
+      "description": "Configuration for Rated Heating Capacity."
+    },
+    {
+      "id": 14,
+      "name": "Thermal Mass",
+      "unit": "kJ/℃",
+      "type": "number",
+      "description": "Configuration for Thermal Mass."
+    },
+    {
+      "id": 15,
+      "name": "Heat Transfer Coefficient",
+      "unit": "W/℃",
+      "type": "number",
+      "description": "Configuration for Heat Transfer Coefficient."
+    },
+    {
+      "id": 16,
+      "name": "Controlled Area",
+      "unit": "m²",
+      "type": "number",
+      "description": "Configuration for Controlled Area."
+    }
   ],
   "M": [
-    {"id":1,"name":"Load Power","unit":"kW","type":"number"},
-    {"id":2,"name":"Energy Used","unit":"kWh","type":"number"},
-    {"id":3,"name":"Voltage","unit":"V","type":"number"},
-    {"id":4,"name":"Current","unit":"A","type":"number"},
-    {"id":5,"name":"Frequency","unit":"Hz","type":"number"},
-    {"id":6,"name":"Power Factor","unit":"","type":"number"},
-    {"id":7,"name":"Reactive Power","unit":"kvar","type":"number"},
-    {"id":8,"name":"Apparent Power","unit":"kVA","type":"number"},
-    {"id":9,"name":"Indoor Temperature","unit":"℃","type":"number"},
-    {"id":10,"name":"Outdoor Temperature","unit":"℃","type":"number"},
-    {"id":11,"name":"Setpoint Temperature","unit":"℃","type":"number"},
-    {"id":12,"name":"Operating Mode","unit":"","type":"string","options":["cooling","heating","off"]}
+    {
+      "id": 1,
+      "name": "Load Power",
+      "unit": "kW",
+      "type": "number",
+      "description": "Measurement for Load Power."
+    },
+    {
+      "id": 2,
+      "name": "Energy Used",
+      "unit": "kWh",
+      "type": "number",
+      "description": "Measurement for Energy Used."
+    },
+    {
+      "id": 3,
+      "name": "Voltage",
+      "unit": "V",
+      "type": "number",
+      "description": "Measurement for Voltage."
+    },
+    {
+      "id": 4,
+      "name": "Current",
+      "unit": "A",
+      "type": "number",
+      "description": "Measurement for Current."
+    },
+    {
+      "id": 5,
+      "name": "Frequency",
+      "unit": "Hz",
+      "type": "number",
+      "description": "Measurement for Frequency."
+    },
+    {
+      "id": 6,
+      "name": "Power Factor",
+      "unit": "",
+      "type": "number",
+      "description": "Measurement for Power Factor."
+    },
+    {
+      "id": 7,
+      "name": "Reactive Power",
+      "unit": "kvar",
+      "type": "number",
+      "description": "Measurement for Reactive Power."
+    },
+    {
+      "id": 8,
+      "name": "Apparent Power",
+      "unit": "kVA",
+      "type": "number",
+      "description": "Measurement for Apparent Power."
+    },
+    {
+      "id": 9,
+      "name": "Indoor Temperature",
+      "unit": "℃",
+      "type": "number",
+      "description": "Measurement for Indoor Temperature."
+    },
+    {
+      "id": 10,
+      "name": "Outdoor Temperature",
+      "unit": "℃",
+      "type": "number",
+      "description": "Measurement for Outdoor Temperature."
+    },
+    {
+      "id": 11,
+      "name": "Setpoint Temperature",
+      "unit": "℃",
+      "type": "number",
+      "description": "Measurement for Setpoint Temperature."
+    },
+    {
+      "id": 12,
+      "name": "Operating Mode",
+      "unit": "",
+      "type": "string",
+      "options": [
+        "cooling",
+        "heating",
+        "off"
+      ],
+      "description": "Measurement for Operating Mode."
+    }
   ],
   "A": [
-    {"id":1,"name":"Setpoint Temperature","unit":"℃","type":"number","min":16,"max":30},
-    {"id":2,"name":"Temperature Tolerance","unit":"℃","type":"number","min":0.5,"max":5}
+    {
+      "id": 1,
+      "name": "Setpoint Temperature",
+      "unit": "℃",
+      "type": "number",
+      "min": 16,
+      "max": 30,
+      "description": "Command for Setpoint Temperature."
+    },
+    {
+      "id": 2,
+      "name": "Temperature Tolerance",
+      "unit": "℃",
+      "type": "number",
+      "min": 0.5,
+      "max": 5,
+      "description": "Command for Temperature Tolerance."
+    }
   ]
 }

@@ -1,43 +1,237 @@
 {
   "name": "EV_Charging_Load",
-  "pName": "Load",
-  "canCreateInstance": true,
+  "type": "Load",
+  "description": "EV charging load with electrical measurements and operating controls.",
   "topology": {
-    "enabled": true,
-    "type": "standalone",
-    "image": "device-EVChargingLoad.png"
+    "image": "device-EVChargingLoad.png",
+    "connections": [
+      {
+        "products": [
+          "Meter"
+        ],
+        "min": 1,
+        "max": 1
+      }
+    ],
+    "description": "One Meter connection is required."
   },
+  "display": [
+    1,
+    2,
+    3,
+    4,
+    9
+  ],
   "P": [
-    {"id":1,"name":"Max Voltage","unit":"V","type":"number"},
-    {"id":2,"name":"Max Current","unit":"A","type":"number"},
-    {"id":3,"name":"Rated Frequency","unit":"Hz","type":"number"},
-    {"id":4,"name":"Max Power","unit":"kW","type":"number"},
-    {"id":5,"name":"Load Flexibility","unit":"","type":"string","options":["rigid","flexible"]},
-    {"id":6,"name":"Adjustable Power Range","unit":"kW","type":"number"},
-    {"id":7,"name":"Response Time","unit":"min","type":"number"},
-    {"id":8,"name":"Min Runtime","unit":"min","type":"number"},
-    {"id":9,"name":"Max Interrupt Time","unit":"min","type":"number"},
-    {"id":10,"name":"Shiftable Time Window","unit":"min","type":"number"},
-    {"id":11,"name":"Charger Type","unit":"","type":"string","options":["Level1","Level2","DC_Fast"]},
-    {"id":12,"name":"Battery Capacity","unit":"kWh","type":"number"},
-    {"id":13,"name":"Charging Efficiency","unit":"%","type":"number","default":90}
+    {
+      "id": 1,
+      "name": "Max Voltage",
+      "unit": "V",
+      "type": "number",
+      "description": "Configuration for Max Voltage."
+    },
+    {
+      "id": 2,
+      "name": "Max Current",
+      "unit": "A",
+      "type": "number",
+      "description": "Configuration for Max Current."
+    },
+    {
+      "id": 3,
+      "name": "Rated Frequency",
+      "unit": "Hz",
+      "type": "number",
+      "description": "Configuration for Rated Frequency."
+    },
+    {
+      "id": 4,
+      "name": "Max Power",
+      "unit": "kW",
+      "type": "number",
+      "description": "Configuration for Max Power."
+    },
+    {
+      "id": 5,
+      "name": "Load Flexibility",
+      "unit": "",
+      "type": "string",
+      "options": [
+        "rigid",
+        "flexible"
+      ],
+      "description": "Configuration for Load Flexibility."
+    },
+    {
+      "id": 6,
+      "name": "Adjustable Power Range",
+      "unit": "kW",
+      "type": "number",
+      "description": "Configuration for Adjustable Power Range."
+    },
+    {
+      "id": 7,
+      "name": "Response Time",
+      "unit": "min",
+      "type": "number",
+      "description": "Configuration for Response Time."
+    },
+    {
+      "id": 8,
+      "name": "Min Runtime",
+      "unit": "min",
+      "type": "number",
+      "description": "Configuration for Min Runtime."
+    },
+    {
+      "id": 9,
+      "name": "Max Interrupt Time",
+      "unit": "min",
+      "type": "number",
+      "description": "Configuration for Max Interrupt Time."
+    },
+    {
+      "id": 10,
+      "name": "Shiftable Time Window",
+      "unit": "min",
+      "type": "number",
+      "description": "Configuration for Shiftable Time Window."
+    },
+    {
+      "id": 11,
+      "name": "Charger Type",
+      "unit": "",
+      "type": "string",
+      "options": [
+        "Level1",
+        "Level2",
+        "DC_Fast"
+      ],
+      "description": "Configuration for Charger Type."
+    },
+    {
+      "id": 12,
+      "name": "Battery Capacity",
+      "unit": "kWh",
+      "type": "number",
+      "description": "Configuration for Battery Capacity."
+    },
+    {
+      "id": 13,
+      "name": "Charging Efficiency",
+      "unit": "%",
+      "type": "number",
+      "default": 90,
+      "description": "Configuration for Charging Efficiency."
+    }
   ],
   "M": [
-    {"id":1,"name":"Load Power","unit":"kW","type":"number"},
-    {"id":2,"name":"Energy Used","unit":"kWh","type":"number"},
-    {"id":3,"name":"Voltage","unit":"V","type":"number"},
-    {"id":4,"name":"Current","unit":"A","type":"number"},
-    {"id":5,"name":"Frequency","unit":"Hz","type":"number"},
-    {"id":6,"name":"Power Factor","unit":"","type":"number"},
-    {"id":7,"name":"Reactive Power","unit":"kvar","type":"number"},
-    {"id":8,"name":"Apparent Power","unit":"kVA","type":"number"},
-    {"id":9,"name":"Charging Status","unit":"","type":"string","options":["charging","idle","completed"]}
+    {
+      "id": 1,
+      "name": "Load Power",
+      "unit": "kW",
+      "type": "number",
+      "description": "Measurement for Load Power."
+    },
+    {
+      "id": 2,
+      "name": "Energy Used",
+      "unit": "kWh",
+      "type": "number",
+      "description": "Measurement for Energy Used."
+    },
+    {
+      "id": 3,
+      "name": "Voltage",
+      "unit": "V",
+      "type": "number",
+      "description": "Measurement for Voltage."
+    },
+    {
+      "id": 4,
+      "name": "Current",
+      "unit": "A",
+      "type": "number",
+      "description": "Measurement for Current."
+    },
+    {
+      "id": 5,
+      "name": "Frequency",
+      "unit": "Hz",
+      "type": "number",
+      "description": "Measurement for Frequency."
+    },
+    {
+      "id": 6,
+      "name": "Power Factor",
+      "unit": "",
+      "type": "number",
+      "description": "Measurement for Power Factor."
+    },
+    {
+      "id": 7,
+      "name": "Reactive Power",
+      "unit": "kvar",
+      "type": "number",
+      "description": "Measurement for Reactive Power."
+    },
+    {
+      "id": 8,
+      "name": "Apparent Power",
+      "unit": "kVA",
+      "type": "number",
+      "description": "Measurement for Apparent Power."
+    },
+    {
+      "id": 9,
+      "name": "Charging Status",
+      "unit": "",
+      "type": "string",
+      "options": [
+        "charging",
+        "idle",
+        "completed"
+      ],
+      "description": "Measurement for Charging Status."
+    }
   ],
   "A": [
-    {"id":1,"name":"Start","unit":"","type":"string"},
-    {"id":2,"name":"Stop","unit":"","type":"string"},
-    {"id":3,"name":"Power Set","unit":"kW","type":"number"},
-    {"id":4,"name":"Target SOC","unit":"%","type":"number","min":0,"max":100},
-    {"id":5,"name":"Deadline Time","unit":"HH:mm","type":"string"}
+    {
+      "id": 1,
+      "name": "Start",
+      "unit": "",
+      "type": "string",
+      "description": "Command for Start."
+    },
+    {
+      "id": 2,
+      "name": "Stop",
+      "unit": "",
+      "type": "string",
+      "description": "Command for Stop."
+    },
+    {
+      "id": 3,
+      "name": "Power Set",
+      "unit": "kW",
+      "type": "number",
+      "description": "Command for Power Set."
+    },
+    {
+      "id": 4,
+      "name": "Target SOC",
+      "unit": "%",
+      "type": "number",
+      "min": 0,
+      "max": 100,
+      "description": "Command for Target SOC."
+    },
+    {
+      "id": 5,
+      "name": "Deadline Time",
+      "unit": "HH:mm",
+      "type": "string",
+      "description": "Command for Deadline Time."
+    }
   ]
 }

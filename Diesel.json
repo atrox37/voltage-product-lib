@@ -1,50 +1,262 @@
 {
   "name": "Diesel",
-  "pName": "Generator",
-  "canCreateInstance": true,
+  "type": "Generator",
+  "description": "Diesel generator with generation capability, fuel measurements, and operating controls.",
   "topology": {
-    "enabled": true,
-    "type": "standalone",
     "image": "device-Diesel.png",
-    "connectableProducts": ["Distribution_Board"]
+    "connections": [
+      {
+        "products": [
+          "Meter"
+        ],
+        "min": 1,
+        "max": 1
+      }
+    ],
+    "description": "One Meter connection is required."
   },
+  "display": [
+    1,
+    13,
+    14,
+    15,
+    16
+  ],
   "P": [
-    {"id":1,"name":"Max Power","unit":"kW","type":"number"},
-    {"id":2,"name":"Max Voltage","unit":"V","type":"number"},
-    {"id":3,"name":"Max Current","unit":"A","type":"number"},
-    {"id":4,"name":"Max Fuel","unit":"L","type":"number"},
-    {"id":5,"name":"Rated Frequency","unit":"Hz","type":"number"},
-    {"id":6,"name":"Min Power","unit":"kW","type":"number"},
-    {"id":7,"name":"Fuel Consumption Rate","unit":"L/kWh","type":"number"},
-    {"id":8,"name":"Startup Time","unit":"min","type":"number"},
-    {"id":9,"name":"Min Runtime","unit":"min","type":"number"},
-    {"id":10,"name":"Response Time","unit":"min","type":"number"}
+    {
+      "id": 1,
+      "name": "Max Power",
+      "unit": "kW",
+      "type": "number",
+      "description": "Configuration for Max Power."
+    },
+    {
+      "id": 2,
+      "name": "Max Voltage",
+      "unit": "V",
+      "type": "number",
+      "description": "Configuration for Max Voltage."
+    },
+    {
+      "id": 3,
+      "name": "Max Current",
+      "unit": "A",
+      "type": "number",
+      "description": "Configuration for Max Current."
+    },
+    {
+      "id": 4,
+      "name": "Max Fuel",
+      "unit": "L",
+      "type": "number",
+      "description": "Configuration for Max Fuel."
+    },
+    {
+      "id": 5,
+      "name": "Rated Frequency",
+      "unit": "Hz",
+      "type": "number",
+      "description": "Configuration for Rated Frequency."
+    },
+    {
+      "id": 6,
+      "name": "Min Power",
+      "unit": "kW",
+      "type": "number",
+      "description": "Configuration for Min Power."
+    },
+    {
+      "id": 7,
+      "name": "Fuel Consumption Rate",
+      "unit": "L/kWh",
+      "type": "number",
+      "description": "Configuration for Fuel Consumption Rate."
+    },
+    {
+      "id": 8,
+      "name": "Startup Time",
+      "unit": "min",
+      "type": "number",
+      "description": "Configuration for Startup Time."
+    },
+    {
+      "id": 9,
+      "name": "Min Runtime",
+      "unit": "min",
+      "type": "number",
+      "description": "Configuration for Min Runtime."
+    },
+    {
+      "id": 10,
+      "name": "Response Time",
+      "unit": "min",
+      "type": "number",
+      "description": "Configuration for Response Time."
+    }
   ],
   "M": [
-    {"id":1,"name":"Diesel Power","unit":"kW","type":"number"},
-    {"id":2,"name":"Diesel Energy","unit":"kWh","type":"number"},
-    {"id":3,"name":"Diesel Voltage","unit":"V","type":"number"},
-    {"id":4,"name":"Diesel Current A","unit":"A","type":"number"},
-    {"id":5,"name":"Diesel Current B","unit":"A","type":"number"},
-    {"id":6,"name":"Diesel Current C","unit":"A","type":"number"},
-    {"id":7,"name":"Diesel Voltage A","unit":"V","type":"number"},
-    {"id":8,"name":"Diesel Voltage B","unit":"V","type":"number"},
-    {"id":9,"name":"Diesel Voltage C","unit":"V","type":"number"},
-    {"id":10,"name":"Diesel Power A","unit":"kW","type":"number"},
-    {"id":11,"name":"Diesel Power B","unit":"kW","type":"number"},
-    {"id":12,"name":"Diesel Power C","unit":"kW","type":"number"},
-    {"id":13,"name":"Diesel Oil","unit":"%","type":"number"},
-    {"id":14,"name":"Diesel Temperature","unit":"℃","type":"number"},
-    {"id":15,"name":"Start Stop Status","unit":"","type":"number"},
-    {"id":16,"name":"Frequency","unit":"Hz","type":"number"},
-    {"id":17,"name":"Diesel Generator","unit":"%","type":"number"},
-    {"id":18,"name":"Diesel Energy Today","unit":"kWh","type":"number"}
+    {
+      "id": 1,
+      "name": "Diesel Power",
+      "unit": "kW",
+      "type": "number",
+      "description": "Measurement for Diesel Power."
+    },
+    {
+      "id": 2,
+      "name": "Diesel Energy",
+      "unit": "kWh",
+      "type": "number",
+      "description": "Measurement for Diesel Energy."
+    },
+    {
+      "id": 3,
+      "name": "Diesel Voltage",
+      "unit": "V",
+      "type": "number",
+      "description": "Measurement for Diesel Voltage."
+    },
+    {
+      "id": 4,
+      "name": "Diesel Current A",
+      "unit": "A",
+      "type": "number",
+      "description": "Measurement for Diesel Current A."
+    },
+    {
+      "id": 5,
+      "name": "Diesel Current B",
+      "unit": "A",
+      "type": "number",
+      "description": "Measurement for Diesel Current B."
+    },
+    {
+      "id": 6,
+      "name": "Diesel Current C",
+      "unit": "A",
+      "type": "number",
+      "description": "Measurement for Diesel Current C."
+    },
+    {
+      "id": 7,
+      "name": "Diesel Voltage A",
+      "unit": "V",
+      "type": "number",
+      "description": "Measurement for Diesel Voltage A."
+    },
+    {
+      "id": 8,
+      "name": "Diesel Voltage B",
+      "unit": "V",
+      "type": "number",
+      "description": "Measurement for Diesel Voltage B."
+    },
+    {
+      "id": 9,
+      "name": "Diesel Voltage C",
+      "unit": "V",
+      "type": "number",
+      "description": "Measurement for Diesel Voltage C."
+    },
+    {
+      "id": 10,
+      "name": "Diesel Power A",
+      "unit": "kW",
+      "type": "number",
+      "description": "Measurement for Diesel Power A."
+    },
+    {
+      "id": 11,
+      "name": "Diesel Power B",
+      "unit": "kW",
+      "type": "number",
+      "description": "Measurement for Diesel Power B."
+    },
+    {
+      "id": 12,
+      "name": "Diesel Power C",
+      "unit": "kW",
+      "type": "number",
+      "description": "Measurement for Diesel Power C."
+    },
+    {
+      "id": 13,
+      "name": "Diesel Oil",
+      "unit": "%",
+      "type": "number",
+      "description": "Measurement for Diesel Oil."
+    },
+    {
+      "id": 14,
+      "name": "Diesel Temperature",
+      "unit": "℃",
+      "type": "number",
+      "description": "Measurement for Diesel Temperature."
+    },
+    {
+      "id": 15,
+      "name": "Start Stop Status",
+      "unit": "",
+      "type": "number",
+      "description": "Measurement for Start Stop Status."
+    },
+    {
+      "id": 16,
+      "name": "Frequency",
+      "unit": "Hz",
+      "type": "number",
+      "description": "Measurement for Frequency."
+    },
+    {
+      "id": 17,
+      "name": "Diesel Generator",
+      "unit": "%",
+      "type": "number",
+      "description": "Measurement for Diesel Generator."
+    },
+    {
+      "id": 18,
+      "name": "Diesel Energy Today",
+      "unit": "kWh",
+      "type": "number",
+      "description": "Measurement for Diesel Energy Today."
+    }
   ],
   "A": [
-    {"id":1,"name":"Start","unit":"","type":"string"},
-    {"id":2,"name":"Stop","unit":"","type":"string"},
-    {"id":3,"name":"Power Set","unit":"kW","type":"number"},
-    {"id":4,"name":"Off On Grid","unit":"","type":"string"},
-    {"id":5,"name":"Clear Error","unit":"","type":"string"}
+    {
+      "id": 1,
+      "name": "Start",
+      "unit": "",
+      "type": "string",
+      "description": "Command for Start."
+    },
+    {
+      "id": 2,
+      "name": "Stop",
+      "unit": "",
+      "type": "string",
+      "description": "Command for Stop."
+    },
+    {
+      "id": 3,
+      "name": "Power Set",
+      "unit": "kW",
+      "type": "number",
+      "description": "Command for Power Set."
+    },
+    {
+      "id": 4,
+      "name": "Off On Grid",
+      "unit": "",
+      "type": "string",
+      "description": "Command for Off On Grid."
+    },
+    {
+      "id": 5,
+      "name": "Clear Error",
+      "unit": "",
+      "type": "string",
+      "description": "Command for Clear Error."
+    }
   ]
 }

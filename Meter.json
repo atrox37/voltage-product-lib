@@ -1,20 +1,26 @@
 {
-  "name": "Three_Phase_Load",
-  "display_name": "Three Phase Load",
-  "type": "Load",
-  "description": "Three-phase load with electrical measurements and operating constraints.",
+  "name": "Meter",
+  "type": "Meter",
+  "description": "General AC meter with aggregate electrical measurements and operating details.",
   "topology": {
-    "image": "device-ThreePhaseLoad.png",
+    "image": "device-Meter.png",
     "connections": [
       {
         "products": [
-          "Meter"
+          "Hybrid_Inverter",
+          "AC_Inverter",
+          "PCS",
+          "Diesel",
+          "Single_Phase_Load",
+          "Three_Phase_Load",
+          "EV_Charging_Load",
+          "HVAC_Load"
         ],
-        "min": 1,
-        "max": 1
+        "min": 0,
+        "max": null
       }
     ],
-    "description": "One Meter connection is required."
+    "description": "May connect to inverters, PCS, diesel generators, and loads. No connection is required by this product."
   },
   "display": [
     1,
